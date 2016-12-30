@@ -6,7 +6,7 @@ import { AppComponent }  from './app.component';
 import { HeroDetailComponent } from './details/hero-detail.component';
 import { HeroesComponent }  from './list/heroes.component'
 import { HeroService } from './common/hero.service'
-import { DashboardComponent } from './dashboard.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 import { AppRoutingModule } from './app.routing.module';
 
