@@ -7,6 +7,7 @@ import 'rxjs/add/operator/toPromise';
 export class HeroService {
 
   private heroesUrl = 'api/heroes';  // URL to web api, api is convention, heroes is name of db object
+  private headers = new Headers({'Content-Type': 'application/json'});
 
   constructor(private http: Http) { }
 
@@ -34,5 +35,13 @@ export class HeroService {
                 .toPromise()
                 .then(response => response.json().data as Hero)
                 .catch(this.handleError);
+  }
+
+  update(hero: Hero): Promise<Hero> {
+    const heroUrl = `${this.heroesUrl}/${hero.id}`
+    return this.http.put(heroUrl, JSON.stringify(hero), this.headers)
+                .toPromise()
+                .then(() => hero)
+                .catch(this.handleError)
   }
 }
