@@ -12,7 +12,7 @@ import { InMemoryDataService }  from './in-memory-data.service';
 import { AppComponent }  from './app.component';
 import { HeroDetailComponent } from './details/hero-detail.component';
 import { HeroesComponent }  from './list/heroes.component'
-import { HeroService } from './common/hero.service'
+import { HeroService } from './service/hero.service'
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
